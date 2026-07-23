@@ -329,7 +329,6 @@ export function AptProvider({ children }) {
     if (!apt || !currentUser) return;
     const updated = polls.map(p => {
       if (p.id === pollId) {
-        if (p.votes[currentUser.id] !== undefined) return p;
         return {
           ...p,
           votes: { ...p.votes, [currentUser.id]: optionIndex }

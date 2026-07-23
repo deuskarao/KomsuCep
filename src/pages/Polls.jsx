@@ -73,10 +73,10 @@ export default function Polls() {
             return (
               <div key={res.index} style={{ position: 'relative' }}>
                 <button 
-                  onClick={() => !hasVoted && votePoll(poll.id, res.index)}
+                  onClick={() => votePoll(poll.id, res.index)}
                   style={{
                     width: '100%', padding: '12px 16px', borderRadius: 12, border: isMyVote ? '2px solid var(--primary)' : '1px solid var(--g200)', background: isMyVote ? 'var(--primary-light)' : '#fff',
-                    display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: hasVoted ? 'default' : 'pointer', transition: 'all 0.2s', position: 'relative', overflow: 'hidden'
+                    display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', transition: 'all 0.2s', position: 'relative', overflow: 'hidden'
                   }}
                 >
                   {hasVoted && (
